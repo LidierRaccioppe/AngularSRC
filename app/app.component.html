@@ -1,0 +1,33 @@
+
+
+
+<main class="main"  >
+  <div class="content">
+    <div class="left-side">
+      <!--<h1>Hola, {{ title }}, {{curso}}</h1> -->
+    </div>
+  </div>
+  <div>
+    <app-home></app-home>
+  </div>
+
+  <button (click)="onClick()" [style.background-color]="buttonColor">Apretar Para Cambiar Valores</button>
+
+  <div [style.color]="textColor" [style.background-image]="'url(' + backgroundImage + ')'" style="background-size: contain">
+    <h1>Supuestamente aca aprece la imagen y se cambia el color del texto</h1>
+  </div>
+
+  <div>
+    Se esta mostrando la imagen actualmente {{ backgroundImage }}
+  </div>
+  <div>
+    Se esta mostrando el texto actualmente {{ textColor }}
+  </div>
+
+  <!--- Meter lo de las cookies para saber cuantas veces apretaste el boton  -->
+
+  <p>Contador de clics: {{ clickCount }}</p>
+
+</main>
+
+<router-outlet />
